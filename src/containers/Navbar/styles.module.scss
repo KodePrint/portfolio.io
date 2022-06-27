@@ -26,26 +26,41 @@
 .baseTop {
   width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem;
-  max-height: 4rem;
+  height: 4rem;
+  position: fixed;
 }
 .baseMenu {
   width: 100vw;
   display: flex;
   background: v.$gray;
-  height: 4rem;
+  height: 5rem;
   position: fixed;
   bottom: 0;
-}
 
-.selector {
-  position: absolute;
-  max-width: 25%;
-  max-height: 40%;
-  bottom: 0;
-  background: red;
-  z-index: -1;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-right: .2rem solid rgba(v.$white, .1);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      font-size: 2.4rem;
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      color: v.$white;
+      background: linear-gradient(rgba(v.$white, .1), transparent);
+    }
+  }
 }
