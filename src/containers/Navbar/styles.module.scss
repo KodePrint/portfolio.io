@@ -1,0 +1,51 @@
+@use '../../_vars' as v;
+// .base {
+//   background: v.$gray;
+//   width: 100vw;
+//   height: 4rem;
+//   display: flex;
+//   position: fixed;
+//   bottom: 0;
+
+//   ul {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     width: 100%;
+//     position: relative;
+
+//     li {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+// }
+.baseTop {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  max-height: 4rem;
+}
+.baseMenu {
+  width: 100vw;
+  display: flex;
+  background: v.$gray;
+  height: 4rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.selector {
+  position: absolute;
+  max-width: 25%;
+  max-height: 40%;
+  bottom: 0;
+  background: red;
+  z-index: -1;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
