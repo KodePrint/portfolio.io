@@ -42,6 +42,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: v.$bg-dark;
+  color: v.$soft-gray;
 }
 ol, ul {
   list-style: none;

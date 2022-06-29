@@ -25,43 +25,29 @@
     }
   }
 
-  .slider-btn {
-    position: absolute;
-    width: 8rem;
-    height: 8rem;
-    bottom: calc(50% - 10rem);
-    left: 1rem;
-    border: none;
-    border-radius: 100%;
-    background: rgba(v.$gray, .1);
+  .blur {
+    display: none;
   }
-  
-  .rigth {
-    left: unset;
-    right: 1rem;
-  }
-
   .slider-container {
-    display: flex;
-    max-width: 100%;
+    max-width: 100vw;
+    height: 45rem;
+    scroll-snap-type: x proximity;
     overflow-x: scroll;
 
     .proyects {
       display: flex;
-
+      justify-content: start;
+      height: 100%;
 
       .card {
-        // width: 80vw;
-        width: 80vw;
-        max-width: min(80vw, 30rem);
-        height: 40rem;
-        margin: 2rem 0 2rem 3rem;
-        border-radius: 3rem;
-        box-shadow: .1rem .1rem 1rem rgba(v.$gray, .1);
-        padding: 1rem;
+        min-width: calc(100% - 6rem);
+        width: 100%;
+        height: calc(100% - 6rem);
+        background: rgba(v.$gray, 0.3);
+        margin: 3rem;
 
-        &:last-child {
-          margin-right: 3rem;
+        h3 {
+          width: 100%;
         }
       }
     }
@@ -70,4 +56,23 @@
 
 .about-container {
   background: teal;
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    padding: 2rem;
+    display: flex;
+    .info {
+      width: 100%;
+    }
+
+    .slider-container {
+      width: 100%;
+      box-shadow: inset 0 0 6rem 4rem rgba(v.$bg-dark, .9);
+
+      .proyects {
+        position: relative;
+      }
+    }
+  }
 }

@@ -17,7 +17,7 @@ function App() {
             web developer, software engineer, and a full stack developer.
           </h4>
         </div>
-        
+
         {/* <button className='slider-btn left'>L</button>
         <button className='slider-btn rigth'>R</button> */}
         <div className="slider-container">
@@ -25,19 +25,19 @@ function App() {
           <div className="proyects">
 
             <div className="card">
-              <h3>Proyecto</h3>
+              <h3>Proyecto 1</h3>
             </div>
             <div className="card">
-              <h3>Proyecto</h3>
+              <h3>Proyecto 2</h3>
             </div>
             <div className="card">
-              <h3>Proyecto</h3>
+              <h3>Proyecto 3</h3>
             </div>
             <div className="card">
-              <h3>Proyecto</h3>
+              <h3>Proyecto 4</h3>
             </div>
             <div className="card">
-              <h3>Proyecto</h3>
+              <h3>Proyecto 5</h3>
             </div>
 
           </div>
