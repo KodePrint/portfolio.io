@@ -42,8 +42,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: v.$bg-dark;
+  background: v.$bg;
   color: v.$soft-gray;
+  transition: .3s all ease;
 }
 ol, ul {
   list-style: none;
@@ -65,3 +66,8 @@ code {
     monospace;
 }
 
+.light {
+  background: v.$bg-light;
+  color: v.$text-light;
+  transition: .3s all ease;
+}

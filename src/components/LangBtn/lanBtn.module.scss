@@ -1,0 +1,12 @@
+@use '../../_vars' as v;
+
+.base {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+
+  img {
+    height: 4rem;
+  }
+}

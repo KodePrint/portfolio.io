@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './routes/App';
 import reportWebVitals from './reportWebVitals';
+// Import Providers
+import { ThemeProvider } from './context/ThemeContext';
 
 // import Styles Module
 import './index.scss'
@@ -9,7 +11,9 @@ import './index.scss'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    < ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

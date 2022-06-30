@@ -1,10 +1,18 @@
+// Import Components
 import Navbar from '../containers/Navbar/Navbar';
+// Import Custom Hooks
+import { useTheme } from '../hooks/useTheme';
+// Import Providers
+// Import Styles
 import '../App.css';
 import './test.scss';
 
 function App() {
+
+  const { theme } = useTheme()
+
   return (
-    <div className="App">
+    <div className={`${theme} App`}>
       <Navbar />
       <section id='home' className="home-container container">
         

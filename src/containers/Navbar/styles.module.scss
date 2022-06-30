@@ -1,28 +1,25 @@
 @use '../../_vars' as v;
-// .base {
-//   background: v.$gray;
-//   width: 100vw;
-//   height: 4rem;
-//   display: flex;
-//   position: fixed;
-//   bottom: 0;
+.base {
+  &:first-child {
+    background: v.$bg-75;
+  }
+}
 
-//   ul {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     width: 100%;
-//     position: relative;
 
-//     li {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-// }
+.light {
+  &:first-child {
+    background: v.$bg-light-75;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .light {
+    background: v.$morning;
+  }
+}
+
+
 .baseTop {
   width: 100vw;
   display: flex;
@@ -31,29 +28,97 @@
   padding: .5rem 2rem;
   height: 6rem;
   position: fixed;
-  background: v.$bg-dark-75;
+  background: v.$bg-75;
+
+  div{
+    background: v.$bg-75;
+  }
+
+  img {
+    height: 5rem;
+    width: 5rem;
+  }
 
   ul {
     display: flex;
+    align-items: center;
+
     li {
+      height: 100%;
       display: flex;
-      
+      align-items: center;
+
       &:first-child {
-        margin-right: 3rem;
+        margin-right: 1.8rem;
       }
-      
-      button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 1.5rem;
-        height: 4rem;
-        width: 4rem;
+      &:last-child {
+
         
+        button {
+          padding: 0;
+          background: none;
+          border: none;
+        }
       }
     }
   }
 }
+
+.languajeSelect {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  width: max-content;
+  right: 0;
+
+  li {
+    display: flex;
+    width: 100%;
+    border: .1rem solid red;
+  }
+
+  img {
+    height: 3rem;
+    object-fit: contain;
+  }
+}
+
+.btnTheme_base {
+  display: flex;
+  width: 6rem;
+  height: 3rem;
+  position: relative;
+  border-radius: 3rem;
+  border: none;
+  font-size: 2rem;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(202, 217, 223);
+
+  svg:nth-child(1) {
+    color: rgb(236, 156, 37);
+  }
+  svg:nth-child(2) {
+    color: rgb(255, 215, 130);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    border-radius: 100%;
+    background: v.$bg-25;
+    box-shadow: inset 0 0 1rem rgba(v.$shadow-withed, .2);
+    top: -.1rem;
+    right: -.1rem;
+  }
+}
+
 .baseMenu {
   width: 100vw;
   display: flex;
@@ -83,6 +148,20 @@
       align-items: center;
       color: v.$white;
       background: linear-gradient(rgba(v.$white, .1), transparent);
+    }
+  }
+}
+.topLight {
+  background: v.$bg-light-75;
+}
+.menuLight {
+  background: v.$morning;
+
+  li {
+    border-right: .2rem solid rgba(v.$text-light, .1);
+
+    a {
+      color: v.$text-light;
     }
   }
 }
