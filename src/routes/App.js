@@ -20,7 +20,7 @@ function App() {
 
         {/* <button className='slider-btn left'>L</button>
         <button className='slider-btn rigth'>R</button> */}
-        <div className="slider-container">
+        {/* <div className="slider-container">
           
           <div className="proyects">
 
@@ -42,7 +42,7 @@ function App() {
 
           </div>
 
-        </div>
+        </div> */}
 
       </section>
       <section id='about' className="about-container container">

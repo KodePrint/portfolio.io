@@ -4,7 +4,7 @@ import {
   RiAccountPinCircleLine, RiAccountPinCircleFill,
   RiSendPlaneLine, RiSendPlaneFill
 } from "react-icons/ri";
-
+import { BsSunFill } from 'react-icons/bs';
 
 // import Styles Module
 import Styles from './styles.module.scss'
@@ -13,6 +13,18 @@ const Navbar = () => {
     <nav className="">
       <div className={Styles.baseTop}>
         <img src="" alt="Logo" />
+        <ul>
+          <li>
+            <button>
+              Lan
+            </button>
+          </li>
+          <li>
+            <button>
+              <BsSunFill />
+            </button>
+          </li>
+        </ul>
       </div>
       <ul className={Styles.baseMenu}>
         <li>
