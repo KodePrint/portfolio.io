@@ -27,6 +27,7 @@ time, mark, audio, video {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  transition: .3s all ease;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -37,13 +38,48 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: v.$bg;
   color: v.$soft-gray;
+  transition: .3s all ease;
+}
+.text-deg {
+  width: 100%;
+  // background: v.$color-dark-deg;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // color: transparent;
+  position: relative;
+  padding-bottom: 1.8rem;
+  transition: .3s all ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .4rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin: .8rem 0;
+    background: v.$color-dark-deg;
+    transition: .3s all ease;
+  }
+}
+h1 {
+  font-size: clamp(calc(v.$text-xxl - 1rem), 8vw, v.$text-xxl);
+  font-weight: bold;
+  font-family: v.$font-genos;
+}
+h3 {
+  font-family: v.$font-genos;
+  font-size: v.$text-xl;
+  font-weight: bold;
   transition: .3s all ease;
 }
 ol, ul {
@@ -65,9 +101,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p, span {
+  transition: .3s all ease;
+}
+
+.titleSection {
+  width: 100%;
+  justify-content: start;
+  position: relative;
+  height: min-content;
+  text-align: start;
+  padding-left: 1.8rem;
+  padding-bottom: 1.8rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin: .8rem 0;
+    background: v.$color-dark-deg;
+    transition: .3s all ease;
+  }
+
+}
 
 .light {
   background: v.$bg-light;
   color: v.$text-light;
   transition: .3s all ease;
+
+  .text-deg {
+    width: 100%;
+    // background: v.$color-deg;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // color: transparent;
+    position: relative;
+    padding-bottom: 1.8rem;
+    transition: .3s all ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .4rem;
+      border-top-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      margin: .8rem 0;
+      background: v.$color-deg;
+      transition: .3s all ease;
+    }
+  }
+
+.titleSection {
+  &::after {
+    background: v.$color-deg;
+  }
+}
 }

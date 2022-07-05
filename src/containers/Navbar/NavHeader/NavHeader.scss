@@ -1,0 +1,58 @@
+@use '../../../vars' as v;
+
+.NavHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  background: v.$bg-75;
+  transition: .6s all ease;
+  position: fixed;
+  padding: .5rem 2rem;
+  top: 0;
+  z-index: 100;
+
+  &__logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    img {
+      height: 100%;
+      object-fit: contain;
+      width: 4rem;
+      height: 4rem;
+      background: v.$bg-light-75;
+      border-radius: 100%;
+    }
+
+    span {
+      display: none;
+      font-weight: bold;
+      text-align: start;
+      font-family: v.$font-genos;
+      font-size: clamp(v.$text-m, 4vw,v.$text-l);
+    }
+  }
+}
+.light {
+
+  .NavHeader {
+    background: v.$bg-light-25;
+  }
+}
+
+@media (min-width: 280px) {
+  .NavHeader {
+  
+    &__logo {
+      img {
+        margin-right: .8rem;
+      }
+      span {
+        display: flex;
+      }
+    }
+  }
+}

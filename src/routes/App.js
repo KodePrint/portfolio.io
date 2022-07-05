@@ -1,6 +1,14 @@
+import React from 'react';
 // Import Components
-import Navbar from '../containers/Navbar/Navbar';
+import MobileNav from '../containers/Navbar/MobileNav';
+import Layout from '../containers/Layout/Layout';
+import Home from '../containers/Home/Home';
+import About from '../containers/About/About';
+import Portfolio from '../containers/Portfolio/Portfolio';
+import Contact from '../containers/Contact/Contact';
+import Footer from '../containers/Footer/Footer';
 // Import Custom Hooks
+import { useObserver } from '../hooks/useObserver';
 import { useTheme } from '../hooks/useTheme';
 // Import Providers
 // Import Styles
@@ -11,57 +19,17 @@ function App() {
 
   const { theme } = useTheme()
 
+  const { isVisible, fromRef } = useObserver({distance: '-50%'})
+
   return (
     <div className={`${theme} App`}>
-      <Navbar />
-      <section id='home' className="home-container container">
-        
-        <div className="info">
-          <h3>Buiding a solutions with tecnology..!</h3>
-          <h1>
-            Kevin Palma
-          </h1>
-          <h4>
-            web developer, software engineer, and a full stack developer.
-          </h4>
-        </div>
-
-        {/* <button className='slider-btn left'>L</button>
-        <button className='slider-btn rigth'>R</button> */}
-        {/* <div className="slider-container">
-          
-          <div className="proyects">
-
-            <div className="card">
-              <h3>Proyecto 1</h3>
-            </div>
-            <div className="card">
-              <h3>Proyecto 2</h3>
-            </div>
-            <div className="card">
-              <h3>Proyecto 3</h3>
-            </div>
-            <div className="card">
-              <h3>Proyecto 4</h3>
-            </div>
-            <div className="card">
-              <h3>Proyecto 5</h3>
-            </div>
-
-          </div>
-
-        </div> */}
-
-      </section>
-      <section id='about' className="about-container container">
-        <h1>About</h1>
-      </section>
-      <section id='portfolio' className="porfolio-container container">
-        <h1>Portfolio</h1>
-      </section>
-      <section id='contact' className="concat-container container">
-        <h1>Contact</h1>
-      </section>
+      <MobileNav />
+      <Layout >
+        <Home />
+        <About />
+        <Portfolio />
+      </Layout>
+      <Footer />
     </div>
   );
 }

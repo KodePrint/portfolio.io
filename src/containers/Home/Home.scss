@@ -1,0 +1,123 @@
+@use '../../vars' as v;
+
+.Home {
+  min-height: 100vh;
+  width: 100%;
+  max-width: min(100%, v.$max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 40rem), 1fr));
+  gap: 1.8rem;
+  align-items: center;
+
+  .info {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+    gap: .8rem;
+    margin-top: 1.8rem;
+
+    .Home__social {
+      display: flex;
+      gap: 1.2rem;
+      margin-top: .8rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 100%;
+        background-color: v.$bg-25;
+        font-size: v.$text-xl;
+        text-decoration: none;
+        color: v.$white;
+        border: .2rem solid transparent;
+        transition: .3s all ease;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &.linkedin:hover {
+          color: v.$linkedin;
+          border: .2rem solid v.$linkedin;
+        }
+        &.github:hover {
+          color: v.$github;
+          border: .2rem solid v.$github;
+        }
+        &.youtube:hover {
+          color: v.$youtube;
+          border: .2rem solid v.$youtube;
+        }
+      }
+    }
+
+  }
+
+  .img-contianer {
+    display: flex;
+    border: .1rem solid red;
+    width: 100%;
+    max-width: 40rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: .5rem solid blue;
+      object-fit: contain;
+      width: 100%;
+      height: 35rem;
+      max-height: 40rem;
+      
+
+    }
+  }
+
+  
+}
+
+.light {
+  .Home {
+    .info {
+      .Home__social {
+        a {
+          color: v.$text-light;
+          background: v.$bg-light-25;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .Home {
+    
+    .info {
+      order: 1;
+      align-self: center;
+
+    }
+
+    .img-contianer {
+      order: 2;
+      align-self: center;
+      max-width: 40rem;
+      margin: 0 auto;
+      justify-self: flex-end;
+    }
+
+  }
+}

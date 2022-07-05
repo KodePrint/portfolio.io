@@ -1,0 +1,182 @@
+@use '../../vars' as v;
+.Footer {
+  margin-bottom: 5rem;
+
+  .Footer__container {
+    max-width: v.$max-width;
+    margin: 0 auto;
+
+    .Footer__social {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  
+      .social_link {
+        height: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: v.$text-xl;
+        position: relative;
+        transition: .3s all ease;
+        cursor: pointer;
+
+        svg {
+          width: 100%;
+          height: v.$text-xxl;
+          transition: .3s all ease;
+        }
+
+        span {
+          width: 100%;
+          font-size: v.$text-m;
+          transition: .3s all ease;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-self: stretch;
+          // z-index: -1;
+        }
+
+        &.linkedin {
+          background-color: v.$linkedin;
+          color: v.$white;
+
+          span {
+            &::after {
+              background-color: v.$linkedin;
+            }
+          }
+        }
+        &.github {
+          background-color: v.$github;
+          color: v.$white;
+
+          span {
+            &::after {
+              background-color: v.$github;
+            }
+          }
+        }
+        &.youtube {
+          background-color: v.$youtube;
+          color: v.$white;
+
+          span {
+            &::after {
+              background-color: v.$youtube;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  .Footer__copy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$bg-75;
+    color: v.$white;
+    min-height: 4rem;
+    width: 100%;
+    padding: .5rem;
+
+    p {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: v.$text-sm;
+    }
+
+    b {
+      font-size: 2rem;
+      color: red;
+      margin: 0 .8rem;
+      animation: heart 4s infinite ease;
+
+    }
+
+    svg {
+      height: 3rem;
+      font-size: 2.5rem;
+      margin-left: .5rem;
+      color: v.$linkedin;
+      animation: reactSpin 4s infinite linear;
+    }
+  }
+
+}
+
+@media (min-width: 650px) {
+  .Footer {
+    margin-bottom: 0;
+
+    .Footer__container {
+  
+      .Footer__social {
+    
+        .social_link {
+          height: 12rem;
+
+          svg {
+            position: absolute;
+            z-index: 10;
+            transition: .3s all ease;
+          }
+
+          span {
+            position: absolute;
+            display: block;
+            align-self: unset;
+
+            &::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              transition: .3s all ease;
+            }
+          }
+
+          &:hover {
+            svg {
+              transform: translateY(-1rem);
+            }
+            span {
+              transform: translateY(3rem);
+  
+              &::after {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes reactSpin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

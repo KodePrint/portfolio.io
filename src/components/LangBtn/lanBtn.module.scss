@@ -5,8 +5,17 @@
   margin: 0;
   padding: 0;
   background: none;
+  cursor: pointer;
 
   img {
-    height: 4rem;
+    height: 3.5rem;
+  }
+
+  
+}
+
+@media (min-width: 768px) {
+  .base {
+    margin-right: 1.8rem;
   }
 }

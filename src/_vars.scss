@@ -1,5 +1,15 @@
 // Global vars
 $max-width: 120rem;
+$text-sm: 1.2rem;
+$text-m: 1.6rem;
+$text-l: 2.4rem;
+$text-xl: 3.2rem;
+$text-xxl: 6rem;
+$text-xxxl: 8rem;
+$font-genos: 'Genos', sans-serif;
+$font-over: 'Overpass', sans-serif;
+
+
 // Dark Vars
 $bg: #121212;
 $bg-75: #1c1c1c;
@@ -12,8 +22,12 @@ $test: #1a936f;
 $test1: #0c6b7c;
 $test2: #FF773d;
 $morning: #88a096;
+$morning-hover: #70857c;
 $cyan: #dcfffd;
-
+$color-deg: linear-gradient(90deg, $gray 20%, $purple 50%, $yellow 75%);
+$linkedin:#0e76a8;
+$github:#6e5494;
+$youtube:#cd201f;
 
 $soft-gray: #ced9dd;
 $white: #f1f1f1;
@@ -23,3 +37,5 @@ $bg-light: #f1f1f1;
 $bg-light-75: #e0e0e0;
 $bg-light-25: #b3b3b3;
 $text-light: #343A40;
+$color-dark-deg: linear-gradient(90deg, $bg-light-75 20%, $purple 50%, $yellow 75%);
+

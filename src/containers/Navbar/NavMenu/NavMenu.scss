@@ -1,0 +1,49 @@
+@use '../../../vars' as v;
+.NavMenu {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+
+
+  .NavMenu__menuList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: v.$bg-25;
+
+    .NavMenu__menuItem {
+      width: calc(100% / 3);
+      border-right: .1rem solid v.$bg-75;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.light {
+  .NavMenu {
+    background: v.$morning;
+
+    .NavMenu__menuList {
+      background: v.$morning;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .NavMenu {
+    .NavMenu__menuList {
+      .NavMenu__menuItem {
+        width: max-content;
+      }
+    }
+  }
+}
